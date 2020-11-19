@@ -22,7 +22,7 @@ function scr_cng(argument0) {
 		randomize()
 		if oe == true
 		{
-			name += choose("ana", "le", "po", "thu", "fy", "wo", "boa", "elo", "le", "ph", "n", "tr", "t")
+			name += choose("ana", "le", "po", "thu", "fy", "wo", "boa", "elo", "le", "ph", "n", "tr", "te")
 			oe = !oe
 		}
 		else if oe == false

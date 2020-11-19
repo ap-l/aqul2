@@ -1,11 +1,11 @@
 /// @description Create/kill citizens
 
 // determine crime rate and kill citizens from crime.
-if pop >= 8
+if pop >= 10
 {
-	crime += pop/100
+	crime += 1
 }
-else if pop <= 5 && crime > 0
+else if pop < 10 && crime > 0
 {
 	crime --;
 }
