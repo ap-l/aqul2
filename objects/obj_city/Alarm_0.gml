@@ -3,7 +3,7 @@
 // determine crime rate and kill citizens from crime.
 if pop >= 8
 {
-	crime += pop/10
+	crime += pop/100
 }
 else if pop <= 5 && crime > 0
 {
