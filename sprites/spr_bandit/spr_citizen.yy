@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"spr_citizen","path":"sprites/spr_citizen/spr_citizen.yy",},
     "resourceVersion": "1.3",
-    "name": "spr_citizen",
+    "name": "",
     "tags": [],
     "resourceType": "GMSequence",
   },
