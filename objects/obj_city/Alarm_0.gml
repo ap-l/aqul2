@@ -1,20 +1,25 @@
 /// @description Create/kill citizens
 
 // determine crime rate and kill citizens from crime. also set city sprite
+if pop >= 50
+{
+	image_index = 4
+	crime = 50
+}
 if pop >= 30
 {
 	image_index = 3	
-	crime += 1
+	crime = 30
 }
 else if pop >= 20
 {
 	image_index = 2	
-	crime += 1
+	crime = 15
 }
-else if pop >= 10
+if pop >= 10
 {
 	image_index = 1
-	crime += 1
+	crime = 2
 }
 else if pop < 10 && crime > 0
 {
@@ -31,9 +36,7 @@ for(var o = crime; o > 0; o--)
 		var sx = irandom(room_width-20)+10
 		var sy = irandom(room_height-20)+10
 	}
-	var t = irandom(array_length(poparr))
-	poparr[t][0] = "noone"
-	poparr[t][1] = 0
+	array_resize(poparr,array_length(poparr)-1)
 	instance_create_depth(sx,sy,0,obj_bandit)
 	if irandom(2) == 2
 	{
