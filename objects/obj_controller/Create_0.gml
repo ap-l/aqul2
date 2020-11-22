@@ -6,6 +6,7 @@ audio_play_sound(snd_gns,1,true)
 global.gridsz = 8
 global.roadlist = ds_list_create()
 global.lnd = mp_grid_create(0,0,128,96,8,8)
+global.bandits[0] = 0;
 alarm[0] = 5
 alarm[1] = 120
 for(var w = room_width; w >= 0; w -= 8)

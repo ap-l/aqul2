@@ -28,9 +28,12 @@ else if pop < 10 && crime > 0
 }
 for(var o = crime; o > 0; o--)
 {
-	array_resize(poparr,array_length(poparr)-1)
+	global.bandits[instance_number(obj_bandit)] = array_get(poparr,array_length(poparr)-1)
+	array_resize(poparr,array_length(poparr)-2)
 	instance_create_depth(x,y,0,obj_bandit)
 	show_debug_message(poparr)
+	show_debug_message("bandits\/")
+	show_debug_message(global.bandits)
 	if irandom(2) == 2
 	{
 		crime --;	
@@ -48,6 +51,6 @@ for (var i = floor(pop/2); i > 0; i--)
 	}
 }
 econ += ceil((pop-crime*irandom(2)/(floor(econ/4)))/4)
-pop = array_length(poparr)
-show_debug_message(array_length(poparr))
+pop = array_length(poparr)-1
+show_debug_message(array_length(poparr)-1)
 alarm[0] = 1400

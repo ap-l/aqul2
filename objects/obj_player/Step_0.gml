@@ -48,7 +48,7 @@ else if collision_point(x+vx,y+vy,obj_water,false,false) or collision_point(x+vx
 
 if keyboard_check_pressed(ord("E"))
 {
-	instance_create_depth(round(x/global.gridsz)*global.gridsz,round(y/global.gridsz)*global.gridsz,-1,obj_city)
+	instance_create_depth((round(x/16)*16)-12,(round(y/16)*16)-12,70,obj_city)
 	audio_play_sound(snd_citybuilt,1,false);
 
 }

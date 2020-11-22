@@ -1,4 +1,5 @@
 randomize()
+depth = 65
 sx = irandom(room_width-20)+10
 sy = irandom(room_height-20)+10
 path = path_add()
