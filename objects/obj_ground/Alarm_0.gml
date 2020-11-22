@@ -25,10 +25,11 @@ if collision_rectangle(x+8,y+8,x-8,y-8,obj_water,false,false)
 if (!collision_rectangle(x,y,x,y,obj_mountain,false,false)) 
 {
 	if (!collision_rectangle(x+8,y+8,x-8,y-8,obj_water,false,false))
-		sprite_index = choose(spr_ground, spr_ground, spr_ground, spr_forest, spr_forest, spr_river)
+		sprite_index = choose(spr_ground, spr_ground, spr_ground, spr_ground, spr_forest, spr_river,spr_river)
 		if sprite_index = spr_forest
 		{
 			obj = 4
+			instance_create_depth(x,y,1,obj_forest)
 		}	
 		if sprite_index = spr_river
 		{

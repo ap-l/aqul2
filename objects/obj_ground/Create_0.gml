@@ -4,6 +4,7 @@ var icount = 0
 tx = x-8
 obj = 1 // 0 water, 1 ground, 2 mountain, 3 coast, 4 forest, 5 river, 6 forestriver, 7 coastriver
 ty = y-8	
+depth = 90
 alarm[0] = 10
 for(var i = 8; i > 0; i--)
 {

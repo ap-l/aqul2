@@ -17,6 +17,7 @@
     {"id":{"name":"spr_road","path":"sprites/spr_road/spr_road.yy",},"order":13,},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},"order":0,},
     {"id":{"name":"spr_deer","path":"sprites/spr_deer/spr_deer.yy",},"order":1,},
+    {"id":{"name":"obj_forest","path":"objects/obj_forest/obj_forest.yy",},"order":13,},
     {"id":{"name":"spr_citizen","path":"sprites/spr_citizen/spr_citizen.yy",},"order":2,},
     {"id":{"name":"spr_house","path":"sprites/spr_house/spr_house.yy",},"order":15,},
     {"id":{"name":"snd_walk","path":"sounds/snd_walk/snd_walk.yy",},"order":0,},

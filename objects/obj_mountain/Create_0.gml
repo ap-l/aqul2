@@ -2,6 +2,7 @@
 // You can write your code in this editor
 tx = x-8
 ty = y-8	
+depth = 90
 for(var i = 8; i > 0; i--)
 {
 			
@@ -34,3 +35,4 @@ for(var i = 8; i > 0; i--)
 	}
 	instance_create_depth(tx,ty,0,obj_ground)	
 }
+alarm[0] = 120

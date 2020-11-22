@@ -28,16 +28,9 @@ else if pop < 10 && crime > 0
 }
 for(var o = crime; o > 0; o--)
 {
-	var sx = irandom(room_width-20)+10
-	var sy = irandom(room_height-20)+10
-	while(collision_point(sx,sy,obj_water,false,false) != noone)
-	{
-		randomize()
-		var sx = irandom(room_width-20)+10
-		var sy = irandom(room_height-20)+10
-	}
 	array_resize(poparr,array_length(poparr)-1)
-	instance_create_depth(sx,sy,0,obj_bandit)
+	instance_create_depth(x,y,0,obj_bandit)
+	show_debug_message(poparr)
 	if irandom(2) == 2
 	{
 		crime --;	

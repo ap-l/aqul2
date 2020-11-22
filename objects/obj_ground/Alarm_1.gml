@@ -6,8 +6,11 @@ if collision_rectangle(x+8,y,x-8,y,obj_river,false,false)
 	{
 		case 1:
 		{
+			if !collision_point(x,y,obj_forest,true,true)
+			{
 			sprite_index = choose(spr_river,spr_river2,spr_river3)
 			obj = 5
+			}
 			break;
 		}
 		case 3:
@@ -24,3 +27,4 @@ if collision_rectangle(x+8,y,x-8,y,obj_river,false,false)
 		}
 	}
 }
+alarm[2] = 400

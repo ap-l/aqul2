@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 randomize()
+depth = 80
 cname = scr_namegen(irandom(1)+2)
 image_speed = 0
 pop = 6 // population. if it reaches 0 then the city will be destroyed
