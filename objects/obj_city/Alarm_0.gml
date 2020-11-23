@@ -23,16 +23,27 @@ if pop >= 10
 }
 else if pop < 10 && crime > 0
 {
-	image_index = 0
-	crime --;
+	if forest == true
+	{
+		image_index = 5
+	}
+	else
+	{
+		image_index = 0
+		crime --;
+	}
 }
 for(var o = crime; o > 0; o--)
 {
+	global.walkers[instance_number(obj_citizen)] = array_get(poparr,array_length(poparr)-1)
+	array_resize(poparr,array_length(poparr)-2)
+	instance_create_depth(x,y,0,obj_citizen)
 	global.bandits[instance_number(obj_bandit)] = array_get(poparr,array_length(poparr)-1)
 	array_resize(poparr,array_length(poparr)-2)
 	instance_create_depth(x,y,0,obj_bandit)
+	show_debug_message("xxxxxxxxxx citizens xxxxxxxxx")
 	show_debug_message(poparr)
-	show_debug_message("bandits\/")
+	show_debug_message("xxxxxxxxxx bandits xxxxxxxxx")
 	show_debug_message(global.bandits)
 	if irandom(2) == 2
 	{

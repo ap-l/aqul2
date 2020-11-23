@@ -13,5 +13,5 @@ while(mp_grid_path(global.lnd,path,x,y,sx,sy,false) == false)
 }
 spd = 0.10
 //alarm[0] = 10
-name = scr_cng(irandom(1)+2)
+name = "";
 path_start(path,spd,path_action_stop,false)

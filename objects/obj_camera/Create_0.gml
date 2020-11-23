@@ -5,8 +5,9 @@ var i = 1/(view_hport[0]/display_get_height())
 // the value which you have to devide the height of the display by to get 400
 global.sidesize = display_get_width()/i - view_wport[0]
 // the size of the black area to either side of the display
-view_set_wport(view_current,view_wport[0]+global.sidesize)
+view_wport[0] = view_wport[0]+global.sidesize
 window_set_size(view_wport[0],view_hport[0])
+surface_resize(application_surface, view_wport[0], view_hport[0])
 
 camera = camera_create();
 

@@ -18,3 +18,15 @@ econ = irandom(20) // economy. dictates how poor the population are.
 crime = 0 // crime dictates how much control the law has, high crime will result in deaths
 alarm[0] = 200
 br = true
+var f = collision_point(x+16,y+16,obj_forest,true,false)
+if f != noone
+{
+	forest = true
+	image_index = 5
+	instance_destroy(f)
+	
+}
+else
+{
+	forest = false	
+}
