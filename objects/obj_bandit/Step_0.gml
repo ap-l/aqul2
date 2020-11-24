@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 var c = collision_circle(x,y,12,obj_citizen,false,true)
+var hc = collision_circle(x,y,24,obj_hideout,false,false)
 var n = false
 if c != noone && agro == true
 {
@@ -18,6 +19,10 @@ if c != noone && agro == true
 	}
 	mp_grid_path(global.lnd,path,x,y,c.x,c.y,true)
 }
+else if hc != noone
+{
+	mp_grid_path(global.lnd,path,x,y,hc.x,hc.y,true)
+}
 else
 {
 	mp_grid_path(global.lnd,path,x,y,sx,sy,false)
@@ -25,15 +30,26 @@ else
 if x == sx && y == sy
 {
 	randomize()
-	sx = irandom(room_width-20)+10
-	sy = irandom(room_height-20)+10
-	mp_grid_path(global.lnd,path,x,y,sx,sy,false)
-	while(mp_grid_path(global.lnd,path,x,y,sx,sy,false) == false)
+	if irandom(2) == 2 // 1 in 3 chance to create a hideout
 	{
-		randomize()
-		sx = irandom(room_width-20)+10
-		sy = irandom(room_height-20)+10
+		var h = instance_create_depth(x,y,50,obj_hideout)
+		with(h)
+		{
+			poparr[0] = cname	
+		}
+		instance_destroy();
+	}
+	else
+	{
+		sx = irandom(x+128)-64
+		sy = irandom(y+128)-64
+		mp_grid_path(global.lnd,path,x,y,sx,sy,false)
+		while(mp_grid_path(global.lnd,path,x,y,sx,sy,false) == false)// if there is no valid path, choose new goal
+		{
+			randomize()
+			sx = irandom(x+128)-64
+			sy = irandom(y+128)-64
+		}
 	}
 }
-
 path_start(path,spd,path_action_stop,false)

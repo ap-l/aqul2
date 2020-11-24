@@ -35,12 +35,17 @@ else if pop < 10 && crime > 0
 }
 for(var o = crime; o > 0; o--)
 {
-	global.walkers[instance_number(obj_citizen)] = array_get(poparr,array_length(poparr)-1)
+	var c = array_get(poparr,array_length(poparr)-1)
+	global.walkers[instance_number(obj_citizen)] = c
 	array_resize(poparr,array_length(poparr)-2)
 	instance_create_depth(x,y,0,obj_citizen)
-	global.bandits[instance_number(obj_bandit)] = array_get(poparr,array_length(poparr)-1)
+	global.bandits[instance_number(obj_bandit)] = c
 	array_resize(poparr,array_length(poparr)-2)
-	instance_create_depth(x,y,0,obj_bandit)
+	var b = instance_create_depth(x,y,0,obj_bandit)
+	with(b)
+	{
+		cname = c
+	}
 	show_debug_message("xxxxxxxxxx citizens xxxxxxxxx")
 	show_debug_message(poparr)
 	show_debug_message("xxxxxxxxxx bandits xxxxxxxxx")
