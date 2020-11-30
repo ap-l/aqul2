@@ -1,9 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editorpathv
-var b = collision_circle(x,y,14,obj_bandit,false,true)
-if b != noone
+var b = collision_circle(x,y,14,obj_bandit,false,true)//check if they can see bandit
+if b != noone // if they can
 {
-	var bp = mp_grid_path(global.lnd,path,x,y,4*-b.x,4*-b.y,true)
+	var bp = mp_grid_path(global.lnd,path,x,y,4*-b.x,4*-b.y,true) //choose point in opposite direction
 	while(bp == false)// if there is no valid path, choose new goal
 	{
 		b++;

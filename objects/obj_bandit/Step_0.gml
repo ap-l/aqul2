@@ -29,9 +29,11 @@ else
 }
 if x == sx && y == sy
 {
+	show_debug_message("hideout1")
 	randomize()
 	if irandom(2) == 2 // 1 in 3 chance to create a hideout
 	{
+		show_debug_message("hideout2")
 		var h = instance_create_depth(x,y,50,obj_hideout)
 		with(h)
 		{
