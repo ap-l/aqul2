@@ -3,11 +3,12 @@
 var b = collision_circle(x,y,14,obj_bandit,false,true)//check if they can see bandit
 if b != noone // if they can
 {
+	var ib = 0
 	var bp = mp_grid_path(global.lnd,path,x,y,4*-b.x,4*-b.y,true) //choose point in opposite direction
 	while(bp == false)// if there is no valid path, choose new goal
 	{
-		b++;
-		bp = mp_grid_path(global.lnd,path,x,y,4*-b.x,4*-b.y,true)
+		ib++;
+		bp = mp_grid_path(global.lnd,path,x,y,4*-b.x-ib,4*-b.y-ib,true)
 	}
 }
 
